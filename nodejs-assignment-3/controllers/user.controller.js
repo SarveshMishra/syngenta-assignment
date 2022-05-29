@@ -1,5 +1,4 @@
 const userModel = require('../models/user.model');
-const postModel = require('../models/post.model');
 
 const createUser = (req, res) => {
 	// Create a new user object from the request body.
@@ -33,26 +32,10 @@ const getAllUsers = (req, res) => {
 	});
 };
 
-const updateUser = (req, res) => {
-	const id = req.query.id;
-	const user = {
-		name: req.body.name,
-		posts: req.body.posts,
-		likes: req.body.likes,
-		updatedAt: new Date(),
-	};
-	// Find the user by id and update the user object.
-	userModel.findByIdAndUpdate(id, user, (err, user) => {
-		if (err) {
-			res.status(500).send(err);
-		} else {
-			res.status(200).json('User updated successfully');
-		}
-	});
-};
+
 
 module.exports = {
 	createUser,
 	getAllUsers,
-	updateUser,
+	
 };

@@ -16,9 +16,8 @@ toggling the published status. By default every post have published status as
  frontend we can update the post status when user want to publish the post.*/
 post.patch('/update', postControllers.updatePost);
 
-// Endpoint to delete a post by id from the database
-post.delete('/delete', postControllers.deletePost);
-
+// Endpoint to search a post by title or author from the database.
+post.get('/search', postControllers.searchPost);
 
 // Endpoint to like a post by id from the database with user id who liked the post both id from query
 post.post('/like', postControllers.likePost);

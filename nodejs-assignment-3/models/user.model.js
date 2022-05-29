@@ -6,7 +6,6 @@ const Schema = mongoose.Schema;
 const userSchema = new Schema({
 	name: { type: String, required: true, minlength: 3, maxlength: 50 },
 	posts: [{ type: Schema.Types.ObjectId, ref: 'Post' }],
-	likes: [{ type: Schema.Types.ObjectId, ref: 'Post' }],
 	createdAt: { type: Date, default: Date.now },
 	updatedAt: { type: Date, default: Date.now },
 });
