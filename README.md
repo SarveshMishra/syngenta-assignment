@@ -73,7 +73,7 @@ Send JSON
 {
 	"title": "Testing new post",
 	"description": "hey there this is a test meassage",
-	"labels": ["test"]
+	"labels": ["JS"]
 }
 ```
 
